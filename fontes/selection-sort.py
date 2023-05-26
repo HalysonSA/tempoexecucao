@@ -2,44 +2,45 @@ import random
 import time
 
 
-def selection_sort(arr):
-    n = len(arr)
+def selection_sort(lista):
+    n = len(lista)
     for i in range(n):
         # Encontra o índice do menor elemento restante
         min_index = i
         for j in range(i+1, n):
-            if arr[j] < arr[min_index]:
+            if lista[j] < lista[min_index]:
                 min_index = j
 
         # Troca o elemento atual pelo menor elemento restante
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+        lista[i], lista[min_index] = lista[min_index], lista[i]
 
 # Função para gerar um vetor de tamanho N com números aleatórios
 
 
-def generate_random_array(N):
+def generate_random_lista(N):
     return [random.randint(1, 100) for _ in range(N)]
 
 
 # Teste de tempo de execução
-N = 10000  # Número de testes
+N = 100  # Número de testes
 # Tamanhos dos vetores a serem testados
-array_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+listaay_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
 
-with open("../graficos/select-sort.txt", "w") as file:
-    for size in array_sizes:
+with open("../graficos/selection-sort.txt", "w") as file:
+    for size in listaay_sizes:
         total_execution_time = 0
         print(f"Tamanho do vetor: {size}")
 
         for _ in range(N):
-            arr = generate_random_array(size)
+            lista = generate_random_lista(size)
 
             start_time = time.time()
-            selection_sort(arr)
+            selection_sort(lista)
             end_time = time.time()
 
-            execution_time = end_time - start_time
+            execution_time = (end_time - start_time) * \
+                1000  # Tempo em milissegundos
             total_execution_time += execution_time
 
         average_execution_time = total_execution_time / N

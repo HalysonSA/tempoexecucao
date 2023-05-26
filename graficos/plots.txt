@@ -1,1 +1,6 @@
-plot "select-sort.txt" using 1:2 with linespoints
+plot "selection-sort.txt" using 1:2 with linespoints
+plot "merge-sort.txt" using 1:2 with linespoints
+plot "insertion-sort-worst.txt" using 1:2 with linespoints,"insertion-sort-best.txt" using 1:2 with linespoints,"insertion-sort.txt" using 1:2 with linespoints
+
+#Todos
+plot "selection-sort.txt" using 1:2 with linespoints, "merge-sort.txt" using 1:2 with linespoints,"insertion-sort-worst.txt" using 1:2 with linespoints,"insertion-sort-best.txt" using 1:2 with linespoints,"insertion-sort.txt" using 1:2 with linespoints
