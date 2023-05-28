@@ -1,5 +1,6 @@
 import random
 import time
+import os
 
 
 def selection_sort(lista):
@@ -24,11 +25,11 @@ def generate_random_lista(N):
 # Teste de tempo de execução
 N = 100  # Número de testes
 # Tamanhos dos vetores a serem testados
-listaay_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
+lista_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
-
-with open("../graficos/selection-sort.txt", "w") as file:
-    for size in listaay_sizes:
+file_path = os.path.join(os.getcwd(), "selection-sort.txt")
+with open(file_path, "w") as file:
+    for size in lista_sizes:
         total_execution_time = 0
         print(f"Tamanho do vetor: {size}")
 

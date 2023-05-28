@@ -1,1 +1,18 @@
-codigos aqui:
+Os codigos foram feitos em python, para rodar é necessario ter o python instalado e configurado no computador.
+
+para executar os codigos é necessario digitar dentro do diretorio que os arquivos estão: "py nomedoarquivo.py"
+
+no insertion-sort como padrão ele está preparado para gerar o caso medio, caso precise gerar o pior e o melhor caso
+será preciso entrar no codigo alterar a função que gera a lista na linha 43 e também alterar o nome do arquivo
+na linha 35 para não substituir o outro arquivo já gerado.
+
+em todos os codigos tem definido uma variavel denominada N que é a quantidade de vezes que cada tamanho lista vai
+ser submetida ao teste de tempo.
+
+após rodar os codigos o arquivo de texto é gerado armazenando "tamanho do array tempo de execução" 
+os arquivos são gerados na mesma pagina que os codigos foram executados.
+
+para montar o grafico basta abrir o cmd dentro da pasta que estão os arquivos de texto com os tempos 
+rodar gnuplot no console, e rodar "plot 'nomedoarquivo.txt' using 1:2 with linespoints".
+
+tem um arquivo "plots.txt" que deixei os comandos prontos para os arquivos já feitos.

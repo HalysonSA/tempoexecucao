@@ -1,5 +1,6 @@
 import random
 import time
+import os
 
 
 def insertion_sort(lista):
@@ -30,14 +31,16 @@ N = 100  # Número de testes
 # Tamanhos das listas a serem testadas
 list_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
-with open("../graficos/insertion-sort-best.txt", "w") as file:
+# Mudar o nome do arquivo para a função que está sendo usada
+file_path = os.path.join(os.getcwd(), "insertion-sort.txt")
+with open(file_path, "w") as file:
     for size in list_sizes:
         total_execution_time = 0
         print(f"Tamanho da lista: {size}")
 
         for _ in range(N):
             # generate_worst_case(size)   generate_random_list(size)  generate_best_case(size)
-            lista = generate_best_case(size)
+            lista = generate_random_list(size)
             start_time = time.time()
             insertion_sort(lista)
             end_time = time.time()

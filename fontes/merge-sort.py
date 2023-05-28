@@ -1,5 +1,6 @@
 import random
 import time
+import os
 
 
 def mergeSort(lista):
@@ -47,7 +48,9 @@ N = 100  # Número de testes
 # Tamanhos das listas a serem testadas
 list_sizes = [100, 200, 300, 400, 500, 600, 700, 800, 900]
 
-with open("../graficos/merge-sort.txt", "w") as file:
+
+file_path = os.path.join(os.getcwd(), "merge-sort.txt")
+with open(file_path, "w") as file:
     for size in list_sizes:
         total_execution_time = 0
         print(f"Tamanho da lista: {size}")
